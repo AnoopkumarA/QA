@@ -37,7 +37,7 @@ const useTextToSpeech = () => {
 };
 
 function App() {
-  const [ setQuestionPaper] = useState<string>('');
+  const [questionPaper, setQuestionPaper] = useState<string>('');
   const [studyContent, setStudyContent] = useState<string>('');
   const [extractedQuestions, setExtractedQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
