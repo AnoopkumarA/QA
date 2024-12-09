@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import stringSimilarity from 'string-similarity'
 import './App.css'
 
@@ -37,7 +37,7 @@ const useTextToSpeech = () => {
 };
 
 function App() {
-  const [questionPaper, setQuestionPaper] = useState<string>('');
+  const [ setQuestionPaper] = useState<string>('');
   const [studyContent, setStudyContent] = useState<string>('');
   const [extractedQuestions, setExtractedQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
