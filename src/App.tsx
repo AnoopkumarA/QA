@@ -37,7 +37,6 @@ const useTextToSpeech = () => {
 };
 
 function App() {
-  const [questionPaper, setQuestionPaper] = useState<string>('');
   const [studyContent, setStudyContent] = useState<string>('');
   const [extractedQuestions, setExtractedQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -288,7 +287,6 @@ function App() {
       const reader = new FileReader();
       reader.onload = async (e) => {
         const text = e.target?.result as string;
-        setQuestionPaper(text);
         const extractedQs = await extractQuestions(text);
         setQuestions(extractedQs);
         setLoading(false);
